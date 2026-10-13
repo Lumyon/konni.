@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>KonniConsult - ITSM Solution</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- ============================================== -->
+        <!-- COLOR OVERRIDES ONLY - MATCHING THE POSTER -->
+        <!-- ============================================== -->
+        <style>
+            :root {
+                --poster-navy: #0A2240;       /* Deep Navy Blue from poster */
+                --poster-orange: #E65C00;     /* Vibrant Orange from poster */
+            }
+
+            /* Primary Color Overrides (Navy) */
+            .bg-primary, .btn-primary {
+                background-color: var(--poster-navy) !important;
+                border-color: var(--poster-navy) !important;
+            }
+            .text-primary {
+                color: var(--poster-navy) !important;
+            }
+            .border-primary {
+                border-color: var(--poster-navy) !important;
+            }
+
+            /* Secondary Color Overrides (Orange) */
+            .bg-secondary, .btn-secondary {
+                background-color: var(--poster-orange) !important;
+                border-color: var(--poster-orange) !important;
+            }
+            .text-secondary {
+                color: var(--poster-orange) !important;
+            }
+
+            /* Topbar and Footer background override to match poster's dark navy */
+            .bg-dark {
+                background-color: var(--poster-navy) !important;
+            }
+
+            /* Spinner override */
+            .text-primary.spinner-grow {
+                color: var(--poster-navy) !important;
+            }
+
+            /* Footer Styling */
+            .footer {
+                background-color: var(--poster-navy) !important;
+            }
+            .footer h1 span {
+                color: var(--poster-orange) !important;
+            }
+            .footer a {
+                transition: 0.3s;
+            }
+            .footer a:hover {
+                color: var(--poster-orange) !important;
+                padding-left: 5px;
+            }
+
+            /* Normal state: white rounded circle, white icon */
+            .hightech-link .btn {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                border: 1px solid #fff !important;
+                transition: 0.2s;
+                -webkit-tap-highlight-color: transparent;
+            }
+            .hightech-link .btn i {
+                color: #fff !important;
+            }
+            /* Orange only while tapping */
+            .hightech-link .btn:active {
+                background-color: #e8620a !important;
+                border-color: #e8620a !important;
+            }
+            /* After the tap: back to the white rounded look */
+            .hightech-link .btn:focus,
+            .hightech-link .btn:focus-visible {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                border-color: #fff !important;
+                box-shadow: none !important;
+                outline: none;
+            }
+             /* WhatsApp Chat Button */
+                        .whatsapp-btn {
+                position: fixed;
+                right: 30px;
+                bottom: 30px;
+                z-index: 99;
+                background-color: #25D366;
+            }
+            .whatsapp-btn:hover {
+                background-color: #1ebe5d;
+            }
+            .back-to-top:hover {
+                background-color: var(--poster-navy) !important;
+                border-color: var(--poster-navy) !important;
+            }
+            /* lines */
+            .contact-link .border-bottom {
+                border-color: rgba(255, 255, 255, 0.25) !important;
+            }
+
+            /* Services section */
+            .svc-underline {
+                width: 70px;
+                height: 4px;
+                border-radius: 2px;
+                background: var(--poster-orange);
+            }
+
+            .svc-card {
+                height: 100%;
+                background: #fff;
+                border: 1px solid #e6ebf2;
+                border-top: 5px solid var(--poster-orange);
+                border-radius: 12px;
+                padding: 2.2rem 1.8rem;
+                text-align: center;
+                box-shadow: 0 10px 30px rgba(10, 34, 64, 0.08);
+                transition: 0.3s;
+            }
+
+            .svc-icon {
+                width: 84px;
+                height: 84px;
+                margin: 0 auto 1.4rem;
+                border-radius: 50%;
+                background: var(--poster-navy);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                transition: 0.3s;
+            }
+
+            .svc-card h4 {
+                color: var(--poster-navy);
+                margin-bottom: 0.8rem;
+                transition: 0.3s;
+            }
+
+            .svc-card p {
+                color: #555;
+                margin-bottom: 1.4rem;
+                transition: 0.3s;
+            }
+
+            .svc-link {
+                color: var(--poster-orange);
+                font-weight: 600;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+            /* Hover: card turns navy, icon turns orange */
+            .svc-card:hover {
+                background: var(--poster-navy);
+                border-color: var(--poster-navy);
+                border-top-color: var(--poster-orange);
+                transform: translateY(-8px);
+            }
+            .svc-card:hover h4 {
+                color: #fff;
+            }
+            .svc-card:hover p {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .svc-card:hover .svc-icon {
+                background: var(--poster-orange);
+            }
+            .svc-card:hover .svc-link {
+                color: #fff;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <!-- Spinner Start -->
+        <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid bg-primary">
+            <div class="container">
+                <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/konni-logo.svg" class="site-logo" alt="Konni ITSM Solutions">
+                        <h1 class="text-white fw-bold d-block">Konni<span class="text-secondary">Consult</span> </h1>
+                    </a>
+                    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                        <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="service.html" class="nav-item nav-link active">Services</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog Posts</a>
+                            <a href="" class="nav-item nav-link">Projects</a>
+                            <a href="quote.html" class="nav-item nav-link">Request Quote</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+        
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5">
+            <div class="container text-center py-5">
+                <h1 class="display-2 text-white mb-4 animated slideInDown">Services</h1>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Services Start -->
+        <div class="container-fluid py-5 my-5 svc-section">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 650px;">
+                    <h5 class="text-primary text-uppercase">Our Services</h5>
+                    <h1 class="mb-3 text-primary">Smart IT Solutions Built For Your Business</h1>
+                    <div class="mx-auto svc-underline"></div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="svc-card">
+                            <div class="svc-icon"><i class="fas fa-headset"></i></div>
+                            <h4>IT Consulting & Support</h4>
+                            <p>Expert advice and responsive support to plan, manage and fix your IT so your team stays productive.</p>
+                            <a href="consult.html" class="svc-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="svc-card">
+                            <div class="svc-icon"><i class="fas fa-cloud"></i></div>
+                            <h4>Cloud & Network Services</h4>
+                            <p>Secure cloud migration and reliable network design, setup and optimization for your office.</p>
+                            <a href="cloud.html" class="svc-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="svc-card">
+                            <div class="svc-icon"><i class="fas fa-envelope-open-text"></i></div>
+                            <h4>Email Solutions</h4>
+                            <p>Professional business email with your own domain, plus setup, migration and ongoing support.</p>
+                            <a href="email.html" class="svc-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+                        <div class="svc-card">
+                            <div class="svc-icon"><i class="fas fa-tools"></i></div>
+                            <h4>Computer Maintenance</h4>
+                            <p>Hardware and software troubleshooting, cleanups and upgrades that keep your computers running well.</p>
+                            <a href="repair.html" class="svc-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+                        <div class="svc-card">
+                            <div class="svc-icon"><i class="fas fa-truck-moving"></i></div>
+                            <h4>System Relocation</h4>
+                            <p>Safe moving and reinstallation of your computers, servers and network when your office relocates.</p>
+                            <a href="relocation.html" class="svc-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+                        <div class="svc-card">
+                            <div class="svc-icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <h4>GIS & Data Management</h4>
+                            <p>Mapping, spatial analysis and organized data management that turn your information into decisions.</p>
+                            <a href="GIS.html" class="svc-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services End -->
+
+        <!-- Footer Start -->
+         <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+            <div class="container pt-5 pb-4">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <a href="index.html">
+                            <h2 class="text-white fw-bold d-block">About<span class="text-secondary">Company</span> </h2>
+                        </a>
+                        <p class="mt-4 text-light">With over 5 years of experience, Konni Consult delivers dependable IT consulting, cloud, networking and support solutions that help businesses operate securely and efficiently.</p>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Useful Links</a>
+                        <div class="mt-4 d-flex flex-column short-link">
+                            <a href="about.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
+                            <a href="contact.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
+                            <a href="services.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                            <a href="blog.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Blog</a>
+                            <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Projects</a>
+                            <a href="quote.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Request Quote</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="#" class="h3 text-secondary">Services</a>
+                        <div class="mt-4 d-flex flex-column help-link">
+                            <a href="consult.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>IT Consulting & Support</a>
+                            <a href="cloud.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Cloud & Network Services</a>
+                            <a href="email.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Email Solutions</a>
+                            <a href="repair.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Computer Maintenance</a>
+                            <a href="relocation.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>System Relocation</a>
+                            <a href="GIS.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>GIS & Data Management</a>
+                        </div>
+                    </div>
+                  <div class="col-lg-3 col-md-6">
+                    <a href="contact.html" class="h3 text-secondary">Contact Us</a>
+                    <div class="text-white mt-4 d-flex flex-column contact-link">
+                        <a href="https://maps.app.goo.gl/V7wnkrZXbHWLTTi57" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i>MbeziBeach, DSM, Tanzania.</a>
+                        <a href="tel:+255653234444" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i>+ 255 653 234 444</a>
+                        <a href="mailto:info@konniconsult.com?subject=Inquiry%20from%20Website&body=Hello%20KonniConsult," class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>info@konniconsult.com</a>
+
+                        <div class="d-flex hightech-link mt-4">
+                        <a href="https://www.instagram.com/konniconsult/" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-square rounded-circle me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/konni-consult/" target="_blank" rel="noopener" aria-label="LinkedIn" class="btn btn-square rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="" target="_blank" rel="noopener" aria-label="Facebook" class="btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <hr class="text-light mt-5 mb-4">
+                <div class="row">
+                    <div class="col-12 text-center ">
+                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>2026 KonniConsult</a>, All right reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- WhatsApp Chat Button -->
+        <a href="https://wa.me/255653234444?text=Hello%20KonniConsult,%20I%20would%20like%20to%20make%20an%20inquiry."
+        class="btn btn-square rounded-circle whatsapp-btn"
+        target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp text-white fa-lg"></i></a>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <!-- Keep the page at the top on load -->
+        <script>
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    window.scrollTo(0, 0);
+                }, 1);
+            });
+        </script>
+    </body>
+
+</html>
