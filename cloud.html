@@ -3,100 +3,73 @@
 
     <head>
         <meta charset="utf-8">
-        <title>KonniConsult - ITSM Solution</title>
+        <title>Cloud & Network Services - KonniConsult</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+        <meta content="cloud services, network services, cloud migration, Dar es Salaam, Konni Consult" name="keywords">
+        <meta content="Konni Consult's cloud and network services: secure cloud migration, reliable network design, setup and optimization for businesses in Dar es Salaam and beyond." name="description">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
 
         <!-- Icon Font Stylesheet -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
         <!-- Libraries Stylesheet -->
-        <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
 
         <!-- Customized Bootstrap Stylesheet -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
-        <!-- ============================================== -->
-        <!-- COLOR OVERRIDES ONLY - MATCHING THE POSTER -->
-        <!-- ============================================== -->
         <style>
             :root {
-                --poster-navy: #0A2240;       /* Deep Navy Blue from poster */
-                --poster-orange: #E65C00;     /* Vibrant Orange from poster */
+                --poster-navy: #0A2240;
+                --poster-orange: #E65C00;
             }
 
-            /* Primary Color Overrides (Navy) */
+            /* Primary (Navy) */
             .bg-primary, .btn-primary {
                 background-color: var(--poster-navy) !important;
                 border-color: var(--poster-navy) !important;
             }
-            .text-primary {
-                color: var(--poster-navy) !important;
-            }
-            .border-primary {
-                border-color: var(--poster-navy) !important;
-            }
+            .text-primary { color: var(--poster-navy) !important; }
+            .border-primary { border-color: var(--poster-navy) !important; }
 
-            /* Secondary Color Overrides (Orange) */
+            /* Secondary (Orange) */
             .bg-secondary, .btn-secondary {
                 background-color: var(--poster-orange) !important;
                 border-color: var(--poster-orange) !important;
             }
-            .text-secondary {
-                color: var(--poster-orange) !important;
-            }
+            .text-secondary { color: var(--poster-orange) !important; }
 
-            /* Topbar and Footer background override to match poster's dark navy */
-            .bg-dark {
-                background-color: var(--poster-navy) !important;
-            }
+            .bg-dark { background-color: var(--poster-navy) !important; }
+            .text-primary.spinner-grow { color: var(--poster-navy) !important; }
 
-            /* Spinner override */
-            .text-primary.spinner-grow {
-                color: var(--poster-navy) !important;
-            }
-
-            /* Footer Styling */
-            .footer {
-                background-color: var(--poster-navy) !important;
-            }
-            .footer h1 span {
-                color: var(--poster-orange) !important;
-            }
-            .footer a {
-                transition: 0.3s;
-            }
+            /* Footer */
+            .footer { background-color: var(--poster-navy) !important; }
+            .footer h1 span { color: var(--poster-orange) !important; }
+            .footer a { transition: 0.3s; }
             .footer a:hover {
                 color: var(--poster-orange) !important;
                 padding-left: 5px;
             }
 
-            /* Normal state: white rounded circle, white icon */
+            /* Footer social buttons */
             .hightech-link .btn {
                 background-color: rgba(255, 255, 255, 0.1) !important;
                 border: 1px solid #fff !important;
                 transition: 0.2s;
                 -webkit-tap-highlight-color: transparent;
             }
-            .hightech-link .btn i {
-                color: #fff !important;
-            }
-            /* Orange only while tapping */
+            .hightech-link .btn i { color: #fff !important; }
             .hightech-link .btn:active {
                 background-color: #e8620a !important;
                 border-color: #e8620a !important;
             }
-            /* After the tap: back to the white rounded look */
             .hightech-link .btn:focus,
             .hightech-link .btn:focus-visible {
                 background-color: rgba(255, 255, 255, 0.1) !important;
@@ -104,129 +77,52 @@
                 box-shadow: none !important;
                 outline: none;
             }
-             /* WhatsApp Chat Button */
-                        .whatsapp-btn {
+
+            /* WhatsApp button */
+            .whatsapp-btn {
                 position: fixed;
                 right: 30px;
                 bottom: 30px;
                 z-index: 99;
                 background-color: #25D366;
             }
-            .whatsapp-btn:hover {
-                background-color: #1ebe5d;
-            }
-            .back-to-top:hover {
-                background-color: var(--poster-navy) !important;
-                border-color: var(--poster-navy) !important;
-            }
-            /* lines */
+            .whatsapp-btn:hover { background-color: #1ebe5d; }
+
+            /* Footer contact lines */
             .contact-link .border-bottom {
                 border-color: rgba(255, 255, 255, 0.25) !important;
             }
-            /* Blog section */
-            .blog-underline {
+
+            /* Heading underline */
+            .itc-underline {
                 width: 70px;
                 height: 4px;
                 border-radius: 2px;
                 background: var(--poster-orange);
             }
 
-            .post-card {
+            /* Large photo */
+            .itc-photo-big {
+                width: 100%;
                 height: 100%;
-                display: flex;
-                flex-direction: column;
-                background: #fff;
-                border: 1px solid #e6ebf2;
-                border-bottom: 5px solid var(--poster-orange);
+                min-height: 420px;
+                object-fit: cover;
                 border-radius: 12px;
-                overflow: hidden;
-                box-shadow: 0 10px 30px rgba(10, 34, 64, 0.08);
-                transition: 0.3s;
-            }
-            .post-card:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 14px 34px rgba(10, 34, 64, 0.16);
+                border: 4px solid var(--poster-navy);
+                box-shadow: 0 10px 30px rgba(10, 34, 64, 0.12);
             }
 
-            .post-img {
-                position: relative;
-                height: 220px;
-                background-color: var(--poster-navy);
-                background-size: cover;
-                background-position: center;
-            }
-            .post-tag {
-                position: absolute;
-                left: 20px;
-                bottom: -16px;
-                background: var(--poster-orange);
-                color: #fff;
-                font-weight: 600;
-                font-size: 0.85rem;
-                padding: 0.45rem 1rem;
-                border-radius: 50px;
+            /* Paragraphs */
+            .itc-article p {
+                color: #333;
+                font-size: 1.15rem;
+                line-height: 1.85;
+                margin-bottom: 1.3rem;
             }
 
-            .post-body {
-                padding: 2.2rem 1.6rem 1.6rem;
-                display: flex;
-                flex-direction: column;
-                flex-grow: 1;
+            @media (max-width: 991px) {
+                .itc-photo-big { min-height: 280px; }
             }
-            .post-body h4 {
-                color: var(--poster-navy);
-                margin-bottom: 0.7rem;
-                transition: 0.3s;
-            }
-            .post-card:hover .post-body h4 { color: var(--poster-orange); }
-            .post-body p {
-                color: #555;
-                margin-bottom: 1.2rem;
-            }
-            .post-meta {
-                margin-top: auto;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 1rem;
-                border-top: 1px solid #e6ebf2;
-                font-size: 0.9rem;
-                color: #777;
-            }
-            .post-meta i { color: var(--poster-orange); margin-right: 0.4rem; }
-            .post-link {
-                color: var(--poster-orange);
-                font-weight: 600;
-                text-decoration: none;
-                transition: 0.3s;
-            }
-            .post-link:hover { color: var(--poster-navy); }
-
-            /* Blog call to action */
-            .blog-cta {
-                background: var(--poster-navy);
-                border-top: 5px solid var(--poster-orange);
-                border-radius: 12px;
-                padding: 3rem 2rem;
-                text-align: center;
-                color: #fff;
-            }
-            .blog-cta h2 { color: #fff; margin-bottom: 0.8rem; }
-            .blog-cta p { color: rgba(255, 255, 255, 0.85); max-width: 600px; margin: 0 auto 1.8rem; }
-            .blog-btn-orange {
-                background: var(--poster-orange);
-                border: 2px solid var(--poster-orange);
-                color: #fff;
-                font-weight: 600;
-            }
-            .blog-btn-orange:hover { background: #fff; border-color: #fff; color: var(--poster-orange); }
-            .blog-btn-white {
-                background: transparent;
-                border: 2px solid #fff;
-                color: #fff;
-                font-weight: 600;
-            }
-            .blog-btn-white:hover { background: #fff; color: var(--poster-navy); }
         </style>
     </head>
 
@@ -238,13 +134,14 @@
         <!-- Spinner End -->
 
 
+
         <!-- Navbar Start -->
         <div class="container-fluid bg-primary">
             <div class="container">
                 <nav class="navbar navbar-dark navbar-expand-lg py-0">
                     <a href="index.html" class="navbar-brand">
-                        <img src="assets/img/konni-logo.svg" class="site-logo" alt="Konni ITSM Solutions">
-                        <h1 class="text-white fw-bold d-block">Konni<span class="text-secondary">Consult</span> </h1>
+                        <img src="img/konni-logo.svg" class="site-logo" alt="Konni ITSM Solutions">
+                        <h1 class="text-white fw-bold d-block">Konni<span class="text-secondary">Consult</span></h1>
                     </a>
                     <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -253,166 +150,70 @@
                         <div class="navbar-nav ms-auto mx-xl-auto p-0">
                             <a href="index.html" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Services</a>
+                            <a href="service.html" class="nav-item nav-link active">Services</a>
+                            <a href="blog.html" class="nav-item nav-link">Blog Posts</a>
                             <a href="" class="nav-item nav-link">Projects</a>
-                            <a href="blog.html" class="nav-item nav-link active">Blog Posts</a>
+                            <a href="quote.html" class="nav-item nav-link">Request Quote</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-      
                     </div>
                 </nav>
             </div>
         </div>
         <!-- Navbar End -->
 
-        
+
         <!-- Page Header Start -->
         <div class="container-fluid page-header py-5">
             <div class="container text-center py-5">
-                <h1 class="display-2 text-white mb-4 animated slideInDown">Our Blog</h1>
-
+                <h1 class="display-2 text-white mb-4 animated slideInDown">Cloud &amp; Network Services</h1>
             </div>
         </div>
         <!-- Page Header End -->
 
 
-        <!-- Blog Start -->
-<div class="container-fluid py-5 my-5">
-    <div class="container py-5">
+        <!-- Article Start -->
+        <div class="container-fluid py-5 my-5">
+            <div class="container py-5">
 
-        <!-- Heading -->
-        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 700px;">
-            <h5 class="text-secondary text-uppercase">Our Blog</h5>
-            <h1 class="mb-3 text-primary">IT Tips &amp; Insights for Your Business</h1>
-            <div class="mx-auto blog-underline"></div>
+                <!-- Heading -->
+                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 700px;">
+                    <h5 class="text-secondary text-uppercase">Our Services</h5>
+                    <h1 class="mb-3 text-primary">Reliable Cloud &amp; Network Solutions</h1>
+                    <div class="mx-auto itc-underline"></div>
+                </div>
+
+                <!-- Big photo (left) + paragraphs (right) -->
+                <div class="row g-5 align-items-stretch">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                        <img src="img/cloud-1.jpg" class="itc-photo-big" alt="Konni Consult engineer setting up a business network">
+                    </div>
+
+                    <div class="col-lg-6 itc-article d-flex flex-column justify-content-center wow fadeIn" data-wow-delay=".5s">
+                        <p>Konni Consult designs, deploys and manages cloud and network infrastructure for businesses and organizations in Dar es Salaam and beyond. We help you move to secure cloud platforms, and we build reliable office networks, covering wired and wireless connectivity, so that your team can access the systems and data they need, wherever they work.</p>
+
+                        <p>Every solution is planned around your operational requirements and budget, then configured, tested and optimized for performance and security. With more than five years of experience, we provide clear guidance, dependable technical support and transparent quotations, so that your infrastructure remains stable as your business grows.</p>
+
+                        <div>
+                            <a href="service.html" class="btn btn-secondary rounded-pill px-5 py-3 text-white">Other Services</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <!-- Posts -->
-        <div class="row g-4">
-
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                <div class="post-card">
-                    <div class="post-img" style="background-image: url('assets/img/cloud-3.jpg');">
-                        <span class="post-tag">Cloud</span>
-                    </div>
-                    <div class="post-body">
-                        <h4>Is Your Business Ready for the Cloud?</h4>
-                        <p>Moving to the cloud can simplify access and backups. Here are the key questions to ask before you make the switch.</p>
-                        <div class="post-meta">
-                            <span><i class="fas fa-user"></i>Konni Consult</span>
-                            <a href="cloud.html" class="post-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                <div class="post-card">
-                    <div class="post-img" style="background-image: url('assets/img/email-2.jpg');">
-                        <span class="post-tag">Email</span>
-                    </div>
-                    <div class="post-body">
-                        <h4>Why Your Business Needs Email on Its Own Domain</h4>
-                        <p>An address like name@yourcompany.com builds trust with clients. Learn what changes when you move away from free email.</p>
-                        <div class="post-meta">
-                            <span><i class="fas fa-user"></i>Konni Consult</span>
-                            <a href="email.html" class="post-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                <div class="post-card">
-                    <div class="post-img" style="background-image: url('assets/img/repair-3.jpg');">
-                        <span class="post-tag">Maintenance</span>
-                    </div>
-                    <div class="post-body">
-                        <h4>Simple Habits That Keep Computers Running Smoothly</h4>
-                        <p>Regular updates, cleanups and backups prevent most common problems. These easy routines can save you time and repair costs.</p>
-                        <div class="post-meta">
-                            <span><i class="fas fa-user"></i>Konni Consult</span>
-                            <a href="repair.html" class="post-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                <div class="post-card">
-                    <div class="post-img" style="background-image: url('assets/img/cloud-2.jpg');">
-                        <span class="post-tag">Networking</span>
-                    </div>
-                    <div class="post-body">
-                        <h4>Cloud & Network Solutions: The Backbone of Modern Business</h4>
-                        <p>Downtime and poor connectivity cost more than you think. See how optimized cloud and network infrastructure keeps your business running smoothly.</p>
-                        <div class="post-meta">
-                            <span><i class="fas fa-user"></i>Konni Consult</span>
-                            <a href="cloud.html" class="post-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                <div class="post-card">
-                    <div class="post-img" style="background-image: url('assets/img/relocation-2.jpg');">
-                        <span class="post-tag">Relocation</span>
-                    </div>
-                    <div class="post-body">
-                        <h4>Moving Offices? An IT Checklist to Avoid Downtime</h4>
-                        <p>A move is easier when your technology is planned in advance. Use this checklist to keep your team working through the transition.</p>
-                        <div class="post-meta">
-                            <span><i class="fas fa-user"></i>Konni Consult</span>
-                            <a href="relocation.html" class="post-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                <div class="post-card">
-                    <div class="post-img" style="background-image: url('assets/img/GIS-2.jpg');">
-                        <span class="post-tag">GIS</span>
-                    </div>
-                    <div class="post-body">
-                        <h4>What Is GIS and How Can It Help Your Organization?</h4>
-                        <p>Maps and spatial analysis can reveal patterns that tables hide. See how GIS turns location data into practical decisions.</p>
-                        <div class="post-meta">
-                            <span><i class="fas fa-user"></i>Konni Consult</span>
-                            <a href="GIS.html" class="post-link">Read More <i class="fas fa-arrow-right ms-1"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Call to action -->
-        <div class="blog-cta mt-5 wow fadeIn" data-wow-delay=".3s">
-            <h2>Have an IT question?</h2>
-            <p>Tell us what you need help with. We will reply with clear advice and a quote.</p>
-            <a href="quote.html" class="btn blog-btn-white rounded-pill px-4 py-3 m-1">
-                <i class="fas fa-envelope me-2"></i>Request a Quote
-            </a>
-            <a href="contact.html" class="btn blog-btn-white rounded-pill px-4 py-3 m-1">
-                <i class="fas fa-envelope me-2"></i>Contact Us
-            </a>
-        </div>
-
-    </div>
-</div>
-<!-- Blog End -->
+        <!-- Article End -->
 
 
         <!-- Footer Start -->
-         <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+        <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
             <div class="container pt-5 pb-4">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <a href="#" class="h3 text-secondary">About</a>
-                        <p class="mt-4 text-light" style="text-align: justify;">With over 5 years of experience, Konni Consult delivers dependable IT consulting, cloud, networking and support solutions that help businesses operate securely and efficiently.</p>
-                        
+                        <a href="index.html">
+                            <h2 class="text-white fw-bold d-block">About<span class="text-secondary">Company</span></h2>
+                        </a>
+                        <p class="mt-4 text-light">With over 5 years of experience, Konni Consult delivers dependable IT consulting, cloud, networking and support solutions that help businesses operate securely and efficiently.</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <a href="#" class="h3 text-secondary">Useful Links</a>
@@ -438,23 +239,23 @@
                     </div>
                   <div class="col-lg-3 col-md-6">
                     <a href="contact.html" class="h3 text-secondary">Contact Us</a>
-                    <div class="text-white mt-4 d-flex flex-column contact-link">
-                        <a href="https://maps.app.goo.gl/V7wnkrZXbHWLTTi57" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i>MbeziBeach, DSM, Tanzania.</a>
-                        <a href="tel:+255653234444" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i>+ 255 653 234 444</a>
-                        <a href="mailto:info@konniconsult.com?subject=Inquiry%20from%20Website&body=Hello%20KonniConsult," class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>info@konniconsult.com</a>
+                        <div class="text-white mt-4 d-flex flex-column contact-link">
+                            <a href="https://maps.app.goo.gl/V7wnkrZXbHWLTTi57" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i>MbeziBeach, DSM, Tanzania.</a>
+                            <a href="tel:+255653234444" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i>+255 653 234 444</a>
+                            <a href="mailto:info@konniconsult.com?subject=Inquiry%20from%20Website&body=Hello%20KonniConsult," class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>info@konniconsult.com</a>
 
-                        <div class="d-flex hightech-link mt-4">
-                        <a href="https://www.instagram.com/konniconsult/" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-square rounded-circle me-2"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/konni-consult/" target="_blank" rel="noopener" aria-label="LinkedIn" class="btn btn-square rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="" target="_blank" rel="noopener" aria-label="Facebook" class="btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                    </div>
+                            <div class="d-flex hightech-link mt-4">
+                                <a href="https://www.instagram.com/konniconsult/" target="_blank" rel="noopener" aria-label="Instagram" class="btn btn-square rounded-circle me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/konni-consult/" target="_blank" rel="noopener" aria-label="LinkedIn" class="btn btn-square rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" aria-label="Facebook" class="btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <hr class="text-light mt-5 mb-4">
                 <div class="row">
-                    <div class="col-12 text-center ">
-                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>2026 KonniConsult</a>, All right reserved.</span>
+                    <div class="col-12 text-center">
+                        <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>2026 KonniConsult</a>, All rights reserved.</span>
                     </div>
                 </div>
             </div>
@@ -464,36 +265,24 @@
 
         <!-- WhatsApp Chat Button -->
         <a href="https://wa.me/255653234444?text=Hello%20KonniConsult,%20I%20would%20like%20to%20make%20an%20inquiry."
-        class="btn btn-square rounded-circle whatsapp-btn"
-        target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+           class="btn btn-square rounded-circle whatsapp-btn"
+           target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp text-white fa-lg"></i></a>
 
-        
+
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/lib/wow/wow.min.js"></script>
-        <script src="assets/lib/easing/easing.min.js"></script>
-        <script src="assets/lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
 
         <!-- Template Javascript -->
-        <script src="assets/js/main.js"></script>
+        <script src="js/main.js"></script>
 
-        <!-- ============================================== -->
-        <!-- SCRIPT TO STOP AUTO-SCROLL ON PAGE LOAD -->
-        <!-- ============================================== -->
+        <!-- Keep the page at the top on load -->
         <script>
-            // 1. Force the page to stay at the top when it loads
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    window.scrollTo(0, 0);
-                }, 1);
-            });
-
-            // 2. Prevent the back-to-top button from causing a jump on load
-            document.querySelector('.back-to-top').addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.addEventListener('load', function () {
+                setTimeout(function () { window.scrollTo(0, 0); }, 1);
             });
         </script>
     </body>
