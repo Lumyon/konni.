@@ -263,33 +263,6 @@
     color: #fff;
 }
 
-/* Large photo */
-.itc-photo-big {
-    width: 100%;
-    height: 100%;
-    min-height: 420px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 4px solid var(--poster-navy);
-    box-shadow: 0 10px 30px rgba(10, 34, 64, 0.12);
-}
-
-/* Paragraph size next to the photo */
-.itc-article p {
-    font-size: 1.15rem;
-    line-height: 1.85;
-}
-
-@media (max-width: 991px) {
-    .itc-photo-big { min-height: 280px; }
-}
-/* Orange line under the heading */
-.itc-underline {
-    width: 70px;
-    height: 4px;
-    border-radius: 2px;
-    background: var(--poster-orange);
-}
         </style>
     </head>
 
@@ -338,28 +311,30 @@
 
 
 <!-- Article Start -->
-<div class="container-fluid py-5 my-5">
-    <div class="container py-5">
+<div class="container-fluid service-detail-section">
+    <div class="container service-detail-container">
 
         <!-- Heading -->
-        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 700px;">
+        <div class="text-center mx-auto service-detail-heading wow fadeIn" data-wow-delay=".3s">
+            <h5 class="text-secondary text-uppercase">Our Services</h5>
             <h1 class="mb-3 text-primary">Professional IT Consulting &amp; Support</h1>
             <div class="mx-auto itc-underline"></div>
         </div>
 
         <!-- Big photo (left) + paragraphs (right) -->
-        <div class="row g-5 align-items-stretch">
-            <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+        <div class="row align-items-stretch service-detail-layout">
+            <div class="col-lg-6 service-detail-media wow fadeIn" data-wow-delay=".3s">
                 <img src="assets/img/consult-1.jpg" class="itc-photo-big" alt="Konni Consult team supporting a client's IT systems">
             </div>
 
-            <div class="col-lg-6 itc-article d-flex flex-column justify-content-center wow fadeIn" data-wow-delay=".5s">
+            <div class="col-lg-6 itc-article service-detail-copy d-flex flex-column justify-content-start wow fadeIn" data-wow-delay=".5s">
                 <p>Konni Consult provides professional IT consulting and support to businesses and organizations in Dar es Salaam and beyond. We assess your existing technology, recommend solutions that align with your operational goals and budget, and implement them with care, so that your systems are reliable, secure and ready to support growth.</p>
 
-                <p>Our support service ensures that day-to-day technical issues are resolved promptly, whether remotely or on site, minimizing downtime and keeping your team productive. With more than five years of experience, we act as a dependable technology partner, offering clear communication, transparent quotations and practical expertise at every stage.</p>
+                <p>Our support service ensures that day-to-day technical issues are resolved promptly, whether remotely or on site, minimizing downtime and keeping your team productive. We can assist with planning new technology, reviewing existing systems or addressing specific issues that interrupt your team's work. Recommendations are explained in plain language, with priorities and costs discussed before implementation, so you can make informed decisions and take improvements forward at a manageable pace. With more than five years of experience, we act as a dependable technology partner, offering clear communication, transparent quotations and practical expertise at every stage.</p>
 
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="service.html" class="btn btn-secondary rounded-pill px-4 py-2 text-white">Back to Services</a>
+                
+                <div class="d-flex flex-wrap gap-3 service-detail-actions">
+                    <a href="service.html" class="btn btn-outline-primary rounded-pill px-4 py-2">Back to Services</a>
                     <a href="quote.html" class="btn btn-secondary rounded-pill px-4 py-2 text-white">Request a Quote</a>
                 </div>
             </div>
@@ -383,7 +358,7 @@
                         <div class="mt-4 d-flex flex-column short-link">
                             <a href="about.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
                             <a href="contact.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
-                            <a href="services.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                            <a href="service.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
                             <a href="blog.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Blog</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Projects</a>
                             <a href="quote.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Request Quote</a>
@@ -462,4 +437,4 @@
         </script>
     </body>
 
-</html> 
+</html>

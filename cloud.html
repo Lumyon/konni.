@@ -94,36 +94,6 @@
                 border-color: rgba(255, 255, 255, 0.25) !important;
             }
 
-            /* Heading underline */
-            .itc-underline {
-                width: 70px;
-                height: 4px;
-                border-radius: 2px;
-                background: var(--poster-orange);
-            }
-
-            /* Large photo */
-            .itc-photo-big {
-                width: 100%;
-                height: 100%;
-                min-height: 420px;
-                object-fit: cover;
-                border-radius: 12px;
-                border: 4px solid var(--poster-navy);
-                box-shadow: 0 10px 30px rgba(10, 34, 64, 0.12);
-            }
-
-            /* Paragraphs */
-            .itc-article p {
-                color: #333;
-                font-size: 1.15rem;
-                line-height: 1.85;
-                margin-bottom: 1.3rem;
-            }
-
-            @media (max-width: 991px) {
-                .itc-photo-big { min-height: 280px; }
-            }
         </style>
     </head>
 
@@ -173,29 +143,29 @@
 
 
         <!-- Article Start -->
-        <div class="container-fluid py-5 my-5">
-            <div class="container py-5">
+        <div class="container-fluid service-detail-section">
+            <div class="container service-detail-container">
 
                 <!-- Heading -->
-                <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 700px;">
+                <div class="text-center mx-auto service-detail-heading wow fadeIn" data-wow-delay=".3s">
                     <h5 class="text-secondary text-uppercase">Our Services</h5>
                     <h1 class="mb-3 text-primary">Reliable Cloud &amp; Network Solutions</h1>
                     <div class="mx-auto itc-underline"></div>
                 </div>
 
                 <!-- Big photo (left) + paragraphs (right) -->
-                <div class="row g-5 align-items-stretch">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                <div class="row align-items-stretch service-detail-layout">
+                    <div class="col-lg-6 service-detail-media wow fadeIn" data-wow-delay=".3s">
                         <img src="assets/img/cloud-1.jpg" class="itc-photo-big" alt="Konni Consult engineer setting up a business network">
                     </div>
 
-                    <div class="col-lg-6 itc-article d-flex flex-column justify-content-center wow fadeIn" data-wow-delay=".5s">
+                    <div class="col-lg-6 itc-article service-detail-copy d-flex flex-column justify-content-start wow fadeIn" data-wow-delay=".5s">
                         <p>Konni Consult designs, deploys and manages cloud and network infrastructure for businesses and organizations in Dar es Salaam and beyond. We help you move to secure cloud platforms, and we build reliable office networks, covering wired and wireless connectivity, so that your team can access the systems and data they need, wherever they work.</p>
 
-                        <p>Every solution is planned around your operational requirements and budget, then configured, tested and optimized for performance and security. With more than five years of experience, we provide clear guidance, dependable technical support and transparent quotations, so that your infrastructure remains stable as your business grows.</p>
+                        <p>Every solution is planned around your operational requirements and budget, then configured, tested and optimized for performance and security. We take into account how your staff connect, the systems they rely on and the way your organization expects to grow. From improving office connectivity to planning a move to cloud services, the recommended setup is explained clearly so you can understand the options and choose a practical path forward. With more than five years of experience, we provide clear guidance, dependable technical support and transparent quotations, so that your infrastructure remains stable as your business grows.</p>
 
-                        <div class="d-flex flex-wrap gap-3">
-                            <a href="service.html" class="btn btn-secondary rounded-pill px-4 py-2 text-white">Back to Services</a>
+                        <div class="d-flex flex-wrap gap-3 service-detail-actions">
+                            <a href="service.html" class="btn btn-outline-primary rounded-pill px-4 py-2">Back to Services</a>
                             <a href="quote.html" class="btn btn-secondary rounded-pill px-4 py-2 text-white">Request a Quote</a>
                         </div>
                     </div>
@@ -219,7 +189,7 @@
                         <div class="mt-4 d-flex flex-column short-link">
                             <a href="about.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
                             <a href="contact.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
-                            <a href="services.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                            <a href="service.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
                             <a href="blog.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Blog</a>
                             <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Projects</a>
                             <a href="quote.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Request Quote</a>
@@ -287,4 +257,4 @@
         </script>
     </body>
 
-</html> 
+</html>

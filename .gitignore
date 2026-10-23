@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+
+# Dependencies & builds
+node_modules/
+dist/
+
+# Secrets & logs
+.env
+.env.*
+*.log
+
+# Archives & temp
+*.zip
+*.7z
+*.tmp
